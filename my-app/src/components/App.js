@@ -9,26 +9,17 @@ import { createGlobalStyle } from 'styled-components';
   import phone_svg from './svg/icon-whatsapp.svg';
   import mail_svg from './svg/icon-email.svg';
   import background_svg from './svg/background-fouet.svg';
+  import stripe_svg from './svg/stripe.svg';
 
 // Fonts
   import GlobalFonts from './fonts/fonts';
 
 // Variables
 
-  // const highlight_color = '#6ABB97';
-  // const highlight_color_2 = '#C5E4E7';
-
-  const color_blue = '#B5E8F2';
+  const color_blue = '#6ABB97';
   const color_border = '#7F705A';
   const color_text = '#7F705A';
   const color_background = '#F7F7ED';
-
-
-  // const iconSize = 40;
-  // const iconRadius = iconSize/2;
-  // const circleCoords = iconRadius.toString()+','+iconRadius.toString()+','+iconRadius.toString();
-  // const logoMinSize = 120;
-  // const pictureFrameDistance = 15;
 
   const max_width_val = '550px';
 
@@ -40,11 +31,17 @@ import { createGlobalStyle } from 'styled-components';
       scrollbar-width: none;
       margin: 0px; 
       padding: 0px;
-      background-color: ${color_background};
+      background-color: ${color_blue};
+      @media screen and (max-width: ${max_width_val}) {
+        background-color: ${color_background};
+      }
     }
 
-    body {   
-      background-color: ${color_background};
+    body {
+      background-color: ${color_blue};
+      @media screen and (max-width: ${max_width_val}) {
+        background-color: ${color_background};
+      }
       width: 100%;
       height: 100%;
       margin: 0px;
@@ -75,59 +72,34 @@ import { createGlobalStyle } from 'styled-components';
 
   /* Grid */
   const StyledDiv = styled.div`
-    border: 1px solid ${color_background};
     box-sizing: border-box;
-    background-color: ${color_background};
+    background-color: ${color_blue};
+    @media screen and (min-width: ${max_width_val}) {
+      border: 1px solid ${color_blue};
+      background-image: url(${stripe_svg});
+      background-repeat: repeat;
+      background-size: 110px;
+    }
+    @media screen and (max-width: ${max_width_val}) {
+      background-color: ${color_background};
+      border: 1px solid ${color_background};
+    }
     margin: 0;
     display: grid;
     grid-template-areas:
-    'up up up'
-    'upL qrcode upR'
-    'downL info downR'
-    'down down down';
+    'down down down'
+    'downL qrcode downR'
+    'upL info upR'
+    'up up up';
     grid-template-rows: 1fr min-content min-content 1fr;
     grid-template-columns: 1fr min-content 1fr;  
     @media screen and (max-width: ${max_width_val}) {
-      grid-template-columns: 1fr 100% 1fr;  
-    }
-    @media screen and (max-width: ${max_width_val}) {
+      grid-template-columns: 1fr 100% 1fr;
+      grid-template-rows: 0 min-content min-content 0;
+      padding: 8px;
     }
     min-width: 100vw;
     min-height: 100vh;
-  `;
-
-  const StyledUpBGDiv = styled.div`
-    grid-area: up;
-    background-color: ${color_blue};
-    @media screen and (max-width: ${max_width_val}) {
-      background-color: ${color_background};
-    }
-  `;
-  const StyledUpLBGDiv = styled.div`
-    grid-area: upL;
-    display:flex;
-    background-color: ${color_blue};
-    @media screen and (max-width: ${max_width_val}) {
-      background-color: ${color_background};
-    }
-  `;
-  const StyledUpRBGDiv = styled.div`
-    grid-area: upR;
-    display:flex;
-    background-color: ${color_blue};
-    @media screen and (max-width: ${max_width_val}) {
-      background-color: ${color_background};
-    }
-  `;
-
-  const WhiteLineDiv = styled.div`
-    background-color: ${color_background};
-    height: 18px;
-    align-self: flex-end;
-    width:100%;
-    @media screen and (max-width: ${max_width_val}) {
-      height: 0px;
-    }
   `;
 
   const QRCodeHolder = styled.div`
@@ -135,14 +107,12 @@ import { createGlobalStyle } from 'styled-components';
     display: flex;
     height: min-content;
     width: max-content;
-    padding: 8px 8px 0px 8px;
-    border-top: 1px solid ${color_border};
-    border-left: 1px solid ${color_border};
-    border-right: 1px solid ${color_border};
+    padding: 0px 0px 0px 0px;
+    border-top: 3px solid ${color_border};
+    border-left: 3px solid ${color_border};
+    border-right: 3px solid ${color_border};
     background-color: ${color_background};
-    @media screen and (max-width: ${max_width_val}) {
-      border-radius: 15px 15px 0px 0px;
-    }
+    border-radius: 15px 15px 0px 0px;
   `;
 
   const QRCode = styled.div`
@@ -153,31 +123,29 @@ import { createGlobalStyle } from 'styled-components';
     border-left: 1px solid ${color_border};
     border-right: 1px solid ${color_border};
     background-color: ${color_background};
-    @media screen and (max-width: ${max_width_val}) {
-      border-radius: 10px 10px 0px 0px;
-    }
+    border-radius: 12px 12px 0px 0px;
     & > img {
       align-self: end;
       width: 422px;
       @media screen and (max-width: ${max_width_val}) {
-        width: calc(100vw - 22px);
+        width: calc(100vw - 26px);
       }
     }
   `;
 
   const InfoDivHolder = styled.div`
-    padding: 0px 8px 8px 8px;
+    padding: 0px 0px 0px 0px;
     grid-area: info;
     display:flex;
     justify-content: center;
     align-content: flex-start;
-    border-bottom: 1px solid ${color_border};
-    border-left: 1px solid ${color_border};
-    border-right: 1px solid ${color_border};
+    border-bottom: 3px solid ${color_border};
+    border-left: 3px solid ${color_border};
+    border-right: 3px solid ${color_border};
     background-color: ${color_background};
     height: min-content;
+    border-radius: 0px 0px 15px 15px;
     @media screen and (max-width: ${max_width_val}) {
-      border-radius: 0px 0px 15px 15px;
       height: 100%;
     }
   `;
@@ -191,13 +159,13 @@ import { createGlobalStyle } from 'styled-components';
     border-right: 1px solid ${color_border};
     background-image: url(${background_svg});
     background-repeat: no-repeat;
-    background-size: 37%;
+    background-size: 43%;
     background-position: right bottom;
     background-color: ${color_background};
     height: min-content;
+    border-radius: 0px 0px 12px 12px;
     @media screen and (max-width: ${max_width_val}) {
       height: 100%;
-      border-radius: 0px 0px 10px 10px;
     }
     & > ul {
       & > li {
@@ -240,13 +208,6 @@ class App extends Component {
       <StyledDiv>
         <GlobalStyle/>
         <GlobalFonts/>
-        <StyledUpBGDiv/>
-        <StyledUpLBGDiv>
-          <WhiteLineDiv/>
-        </StyledUpLBGDiv>
-        <StyledUpRBGDiv>
-          <WhiteLineDiv/>
-        </StyledUpRBGDiv>
         <QRCodeHolder>
           <QRCode>
             <img src={qr_svg} alt='qr code with logo' className='qrcode'/>
@@ -255,6 +216,8 @@ class App extends Component {
         <InfoDivHolder>
           <InfoDiv>
             <ul>
+              <li><div></div></li>
+              <li><div></div></li>
               <li>
                 <div>
                   <a href="https://api.whatsapp.com/send?phone=5521920010912" target="_blank" rel="noopener noreferrer"><img src={phone_svg} alt='phone icon' className='phone'/></a>
@@ -279,6 +242,7 @@ class App extends Component {
                   <p><a href="mailto:contato@doceamado.com" target="_blank" rel="noopener noreferrer">contato@doceamado.com</a></p>
                 </div>
               </li>
+              <li><div></div></li>
               <li><div></div></li>
               <li><div></div></li>
               <li><div></div></li>
