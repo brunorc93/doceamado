@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/static/js/main.853b6c4a.chunk.js",
-    "main.js.map": "/static/js/main.853b6c4a.chunk.js.map",
+    "main.js": "/static/js/main.19f09d0e.chunk.js",
+    "main.js.map": "/static/js/main.19f09d0e.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.406dd86f.js",
     "runtime-main.js.map": "/static/js/runtime-main.406dd86f.js.map",
-    "static/js/2.3d354aa8.chunk.js": "/static/js/2.3d354aa8.chunk.js",
-    "static/js/2.3d354aa8.chunk.js.map": "/static/js/2.3d354aa8.chunk.js.map",
+    "static/js/2.04bf98c7.chunk.js": "/static/js/2.04bf98c7.chunk.js",
+    "static/js/2.04bf98c7.chunk.js.map": "/static/js/2.04bf98c7.chunk.js.map",
     "index.html": "/index.html",
-    "static/js/2.3d354aa8.chunk.js.LICENSE.txt": "/static/js/2.3d354aa8.chunk.js.LICENSE.txt",
+    "static/js/2.04bf98c7.chunk.js.LICENSE.txt": "/static/js/2.04bf98c7.chunk.js.LICENSE.txt",
     "static/media/Bold.042e4da9.otf": "/static/media/Bold.042e4da9.otf",
     "static/media/BoldItalic.7d0c73ec.otf": "/static/media/BoldItalic.7d0c73ec.otf",
     "static/media/Italic.1d063b5b.otf": "/static/media/Italic.1d063b5b.otf",
@@ -20,6 +20,7 @@
     "static/media/background-fouet.37deb2ef.svg": "/static/media/background-fouet.37deb2ef.svg",
     "static/media/icon-email.4beb7c71.svg": "/static/media/icon-email.4beb7c71.svg",
     "static/media/icon-facebook.d604161b.svg": "/static/media/icon-facebook.d604161b.svg",
+    "static/media/icon-ifood.83bbd638.svg": "/static/media/icon-ifood.83bbd638.svg",
     "static/media/icon-instagram.89da0798.svg": "/static/media/icon-instagram.89da0798.svg",
     "static/media/icon-whatsapp.3dc5c295.svg": "/static/media/icon-whatsapp.3dc5c295.svg",
     "static/media/qrcode_logo.d46e953f.svg": "/static/media/qrcode_logo.d46e953f.svg",
@@ -27,7 +28,7 @@
   },
   "entrypoints": [
     "static/js/runtime-main.406dd86f.js",
-    "static/js/2.3d354aa8.chunk.js",
-    "static/js/main.853b6c4a.chunk.js"
+    "static/js/2.04bf98c7.chunk.js",
+    "static/js/main.19f09d0e.chunk.js"
   ]
 }
