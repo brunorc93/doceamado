@@ -14,6 +14,7 @@ import {
   import insta_svg from './svg/icon-instagram.svg';
   import phone_svg from './svg/icon-whatsapp.svg';
   import mail_svg from './svg/icon-email.svg';
+  import ifood_svg from './svg/icon-ifood.svg';
   import background_svg from './svg/background-fouet.svg';
   import stripe_svg from './svg/stripe.svg';
 
@@ -248,7 +249,13 @@ class App extends Component {
                       </li>
                       <li>
                         <div>
-                          <a href="mailto:contato@doceamado.com" target="_blank" rel="noopener noreferrer"><img src={mail_svg} alt='email icon' className='email' /></a>
+                          <a href="https://www.ifood.com.br/delivery/rio-de-janeiro-rj/doce-amado-botafogo//02daa99a-83dd-4b9c-9b16-bfec3fe070db" target="_blank" rel="noopener noreferrer"><img src={ifood_svg} alt='ifood icon' className='ifood' /></a>
+                          <p><a href="https://www.ifood.com.br/delivery/rio-de-janeiro-rj/doce-amado-botafogo//02daa99a-83dd-4b9c-9b16-bfec3fe070db" target="_blank" rel="noopener noreferrer">Doce Amado - Botafogo</a></p>
+                        </div>
+                      </li>
+                      <li>
+                        <div>
+                        <a href="mailto:contato@doceamado.com" target="_blank" rel="noopener noreferrer"><img src={mail_svg} alt='email icon' className='email' /></a>
                           <p><a href="mailto:contato@doceamado.com" target="_blank" rel="noopener noreferrer">contato@doceamado.com</a></p>
                         </div>
                       </li>
