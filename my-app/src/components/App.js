@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import { createGlobalStyle } from 'styled-components';
+import { 
+  BrowserRouter as Router, 
+  Route, 
+  Switch,
+  Redirect,
+} from "react-router-dom";
 
 // SVGs
   import qr_svg from './svg/qrcode_logo.svg';
@@ -205,51 +211,62 @@ import { createGlobalStyle } from 'styled-components';
 class App extends Component {
   render() {
     return(
-      <StyledDiv>
+      <div>
         <GlobalStyle/>
         <GlobalFonts/>
-        <QRCodeHolder>
-          <QRCode>
-            <img src={qr_svg} alt='qr code with logo' className='qrcode'/>
-          </QRCode>
-        </QRCodeHolder>
-        <InfoDivHolder>
-          <InfoDiv>
-            <ul>
-              <li><div></div></li>
-              <li><div></div></li>
-              <li>
-                <div>
-                  <a href="https://api.whatsapp.com/send?phone=5521920010912" target="_blank" rel="noopener noreferrer"><img src={phone_svg} alt='phone icon' className='phone'/></a>
-                  <p><a href="https://api.whatsapp.com/send?phone=5521920010912" target="_blank" rel="noopener noreferrer">(21) 92001 0912</a></p>
-                </div>
-              </li>
-              <li>
-                <div>
-                  <a href="https://www.instagram.com/doceamadorj/" target="_blank" rel="noopener noreferrer"><img src={insta_svg} alt='instagram icon' className='insta'/></a>
-                  <p><a href="https://www.instagram.com/doceamadorj/" target="_blank" rel="noopener noreferrer">@doceamadorj</a></p>
-                </div>
-              </li>
-              <li>
-                <div>
-                  <a href="https://www.facebook.com/doceamadorj/" target="_blank" rel="noopener noreferrer"><img src={fb_svg} alt='facebook icon' className='weblink'/></a>
-                  <p><a href="https://www.facebook.com/doceamadorj/" target="_blank" rel="noopener noreferrer">/doceamadorj</a></p>
-                </div>
-              </li>
-              <li>
-                <div>
-                  <a href="mailto:contato@doceamado.com" target="_blank" rel="noopener noreferrer"><img src={mail_svg} alt='email icon' className='email' /></a>
-                  <p><a href="mailto:contato@doceamado.com" target="_blank" rel="noopener noreferrer">contato@doceamado.com</a></p>
-                </div>
-              </li>
-              <li><div></div></li>
-              <li><div></div></li>
-              <li><div></div></li>
-              <li><div></div></li>
-            </ul>
-          </InfoDiv>
-        </InfoDivHolder>
-      </StyledDiv>
+        <Router>
+          <Switch>
+            <Route path="/cartao">
+              <StyledDiv>
+                <QRCodeHolder>
+                  <QRCode>
+                    <img src={qr_svg} alt='qr code with logo' className='qrcode'/>
+                  </QRCode>
+                </QRCodeHolder>
+                <InfoDivHolder>
+                  <InfoDiv>
+                    <ul>
+                      <li><div></div></li>
+                      <li><div></div></li>
+                      <li>
+                        <div>
+                          <a href="https://api.whatsapp.com/send?phone=5521920010912" target="_blank" rel="noopener noreferrer"><img src={phone_svg} alt='phone icon' className='phone'/></a>
+                          <p><a href="https://api.whatsapp.com/send?phone=5521920010912" target="_blank" rel="noopener noreferrer">(21) 92001 0912</a></p>
+                        </div>
+                      </li>
+                      <li>
+                        <div>
+                          <a href="https://www.instagram.com/doceamadorj/" target="_blank" rel="noopener noreferrer"><img src={insta_svg} alt='instagram icon' className='insta'/></a>
+                          <p><a href="https://www.instagram.com/doceamadorj/" target="_blank" rel="noopener noreferrer">@doceamadorj</a></p>
+                        </div>
+                      </li>
+                      <li>
+                        <div>
+                          <a href="https://www.facebook.com/doceamadorj/" target="_blank" rel="noopener noreferrer"><img src={fb_svg} alt='facebook icon' className='weblink'/></a>
+                          <p><a href="https://www.facebook.com/doceamadorj/" target="_blank" rel="noopener noreferrer">/doceamadorj</a></p>
+                        </div>
+                      </li>
+                      <li>
+                        <div>
+                          <a href="mailto:contato@doceamado.com" target="_blank" rel="noopener noreferrer"><img src={mail_svg} alt='email icon' className='email' /></a>
+                          <p><a href="mailto:contato@doceamado.com" target="_blank" rel="noopener noreferrer">contato@doceamado.com</a></p>
+                        </div>
+                      </li>
+                      <li><div></div></li>
+                      <li><div></div></li>
+                      <li><div></div></li>
+                      <li><div></div></li>
+                    </ul>
+                  </InfoDiv>
+                </InfoDivHolder>
+              </StyledDiv>
+            </Route>
+            <Route path="">
+              <Redirect to="/cartao" />
+            </Route>
+          </Switch>
+        </Router>
+      </div>
     )
   }
 }
