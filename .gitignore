@@ -6,6 +6,7 @@
 
 # temporary
 /bcard
+/_design
 
 # assets
 /_Assets_from_drive
@@ -47,5 +48,3 @@ yarn-error.log*
 .env.development.local
 .env.test.local
 .eng.production.local
-
-# git@github.com:brunorc93/doceamado.git
