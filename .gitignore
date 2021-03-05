@@ -23,6 +23,8 @@ node_modules/
 coverage/
 
 # production
+/build
+build/
 
 # --------------------------------------------------------------------------
 # files
