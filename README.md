@@ -1,4 +1,4 @@
 # Doce Amado
 
-web business card for the Doce Amado brand.
-made with React and deployed in GitHub Pages
+Web business card for the Doce Amado brand.  
+Made with React and deployed in GitHub Pages
